@@ -10,9 +10,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build Docker Image
-      run: docker build -t docker.pkg.github.com/$GITHUB_REPOSITORY/ruby2.7.2-alpine-mysql2 .
+      run: docker build -t docker.pkg.github.com/$GITHUB_REPOSITORY/ruby2.7.2-alpine-mysql .
 
     - name: Login to Github Registry
       run: echo ${{ secrets.GITHUB_TOKEN }} | docker login docker.pkg.github.com -u ${{secrets.GIT_USER_NAME}} --password-stdin
-    - name: Pushing Doker Image to DokcerHub
-      run: docker push docker.pkg.github.com/$GITHUB_REPOSITORY/ruby2.7.2-alpine-mysql2
+    - name: Pushing docker Image to github docker registry
+      run: docker push docker.pkg.github.com/$GITHUB_REPOSITORY/ruby2.7.2-alpine-mysql
