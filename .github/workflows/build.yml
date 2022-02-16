@@ -3,7 +3,7 @@ name: Build and Push Image for ruby-3.0.1-python-3.8.10
 on:
   push:
     branches:
-      - ruby-3.0.1-python-3.8.10
+      - ruby-3.0.1-python-3.8.10-pyenv
 
 jobs:
   build:
