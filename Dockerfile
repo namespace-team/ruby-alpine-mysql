@@ -10,6 +10,5 @@ RUN apk update \
 && ln -sf python3 /usr/bin/python
 RUN python -m ensurepip
 RUN python -m venv /opt/venv
-RUN source /opt/venv/bin/activate
-RUN pip install --no-cache --upgrade pip setuptools
-RUN pip install web3
+RUN /opt/venv/bin/pip install --no-cache --upgrade pip setuptools
+RUN /opt/venv/bin/pip install web3
