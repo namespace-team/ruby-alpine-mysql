@@ -15,7 +15,7 @@ RUN apk update \
             libxslt-dev \
             mariadb-dev \
             mysql-client \
-            --repository http://dl-cdn.alpinelinux.org/alpine/edge/main/ nodejs=14.16.1-r1 npm \
+            --repository http://dl-cdn.alpinelinux.org/alpine/edge/main/ nodejs=16.15.0-r1 npm \
             yarn \
             tzdata \
             xvfb \
